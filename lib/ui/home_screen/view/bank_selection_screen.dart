@@ -31,9 +31,10 @@ class _BankSelectionState extends State<BankSelectionRoute> {
     _screenSize = MediaQuery.of(context).size;
     double stackHeight = _screenSize.height - 300;
     return AnimatedPositioned(
-      bottom: HomeScreenArguments().currentStack == HomeScreenStacks.bankSelection
-          ? 0
-          : -stackHeight,
+      bottom:
+          HomeScreenArguments().currentStack == HomeScreenStacks.bankSelection
+              ? 0
+              : -stackHeight,
       duration: const Duration(milliseconds: 200),
       child: Container(
         height: stackHeight,
@@ -82,9 +83,7 @@ class _BankSelectionState extends State<BankSelectionRoute> {
 
   Widget _getBottomButton() {
     return GestureDetector(
-      onTap: () {
-        EventsBroadcast.get().send(ChangeHomeScreenStack(currentStack: HomeScreenStacks.bankSelection));
-      },
+      onTap: () {},
       child: Container(
         decoration: const BoxDecoration(
           color: AppColors.colorNavyColorLight,
